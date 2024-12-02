@@ -2,6 +2,8 @@ package util
 
 import (
 	"sort"
+	"strconv"
+	"strings"
 	"unicode"
 )
 
@@ -38,4 +40,14 @@ func RankMapStringInt(values map[string]int) []string {
 		ranked[i] = kv.Key
 	}
 	return ranked
+}
+
+func StringToIntArray(src string, separator string) []int {
+	arr := strings.Split(src, separator)
+	var result []int
+	for _, s := range arr {
+		value, _ := strconv.Atoi(s)
+		result = append(result, value)
+	}
+	return result
 }
