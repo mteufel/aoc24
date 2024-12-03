@@ -2,7 +2,9 @@ package util
 
 import (
 	"bufio"
+	"io"
 	"os"
+	"strings"
 )
 
 func ReadFile(fileName string) []string {
@@ -22,4 +24,16 @@ func ReadFile(fileName string) []string {
 	}
 	readFile.Close()
 	return fileLines
+}
+
+func ReadFileAsString(fileName string) string {
+	inputFile, err := os.Getwd()
+	inputFile = inputFile + fileName
+	CheckError(err)
+	f, err := os.Open(inputFile)
+	CheckError(err)
+	defer f.Close()
+	b := new(strings.Builder)
+	io.Copy(b, f)
+	return b.String()
 }
