@@ -9,8 +9,7 @@ import (
 func Task22() {
 	fmt.Println("\nDay 2, Part 2: Red-Nosed Reports")
 	fmt.Println("===============================================")
-	//reports := util.ReadFile("/day2/data/sample.txt")
-	reports := util.ReadFile("/day2/data/input.txt")
+	reports := util.ReadFile("/data/day2/input.txt")
 	const WithTolerance = true
 	fmt.Println("Result=", analyzeReports(reports, WithTolerance))
 }
@@ -18,8 +17,7 @@ func Task22() {
 func Task21() {
 	fmt.Println("\nDay 2, Part 1: Red-Nosed Reports")
 	fmt.Println("===============================================")
-	//reports := util.ReadFile("/day2/data/sample.txt")
-	reports := util.ReadFile("/day2/data/input.txt")
+	reports := util.ReadFile("/data/day2/input.txt")
 	const WithoutTolerance = false
 	fmt.Println("Result=", analyzeReports(reports, WithoutTolerance))
 

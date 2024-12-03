@@ -10,7 +10,7 @@ import (
 func Task32() {
 	fmt.Println("\nDay 3, Part 2: Mull It Over")
 	fmt.Println("===============================================")
-	input := util.ReadFileAsString("/day3/data/2/input.txt")
+	input := util.ReadFileAsString("/data/day3/2/input.txt")
 
 	r := regexp.MustCompile(`mul\((\d{1,3}),(\d{1,3})\)|do\(\)|don't\(\)`)
 
@@ -38,7 +38,7 @@ func Task32() {
 func Task31() {
 	fmt.Println("\nDay 3, Part 1: Mull It Over")
 	fmt.Println("===============================================")
-	input := util.ReadFileAsString("/day3/data/1/input.txt")
+	input := util.ReadFileAsString("/data/day3/1/input.txt")
 
 	r := regexp.MustCompile(`mul\((\d{1,3}),(\d{1,3})\)`)
 	matches := r.FindAllStringSubmatch(input, -1)

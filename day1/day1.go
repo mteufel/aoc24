@@ -11,9 +11,7 @@ import (
 func Task11() {
 	fmt.Println("\nDay 1, Part 1: Historian Hysteria")
 	fmt.Println("===============================================")
-	//lines := util.ReadFile("/day1/data/sample.txt")
-	//lines := util.ReadFile("/day1/data/1/input.txt")
-	first, second := prepare("/day1/data/1/input.txt")
+	first, second := prepare("/data/day1/1/input.txt")
 
 	fmt.Println("Result=", first)
 	fmt.Println("Result=", second)
@@ -39,8 +37,7 @@ func Task11() {
 func Task12() {
 	fmt.Println("\nDay 1, Part 2: Historian Hysteria")
 	fmt.Println("===============================================")
-	//first, second := prepare("/day1/data/2/sample.txt")
-	first, second := prepare("/day1/data/2/input.txt")
+	first, second := prepare("/data/day1/2/input.txt")
 
 	fmt.Println("First=", first)
 	fmt.Println("Second=", second)

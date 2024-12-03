@@ -9,7 +9,7 @@ import (
 
 func ReadFile(fileName string) []string {
 	inputFile, err := os.Getwd()
-	//inputFile = inputFile + "/data/" + fileName
+	//inputFile = inputFile + "/day1/" + fileName
 	inputFile = inputFile + fileName
 	CheckError(err)
 
