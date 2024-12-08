@@ -7,6 +7,16 @@ import (
 	"strings"
 )
 
+func ReadFileAsGrid(fileName string) [][]string {
+	var matrix [][]string
+	lines := ReadFile(fileName)
+	for _, line := range lines {
+		chars := strings.Split(line, "")
+		matrix = append(matrix, chars)
+	}
+	return matrix
+}
+
 func ReadFile(fileName string) []string {
 	inputFile, err := os.Getwd()
 	//inputFile = inputFile + "/day1/" + fileName
